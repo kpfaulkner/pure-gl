@@ -24,12 +24,12 @@ import (
 
 	"github.com/ebitengine/purego/objc"
 
-	"github.com/hajimehoshi/ebiten/v2/internal/cocoa"
-	"github.com/hajimehoshi/ebiten/v2/internal/graphics"
-	"github.com/hajimehoshi/ebiten/v2/internal/graphicsdriver"
-	"github.com/hajimehoshi/ebiten/v2/internal/graphicsdriver/metal/ca"
-	"github.com/hajimehoshi/ebiten/v2/internal/graphicsdriver/metal/mtl"
-	"github.com/hajimehoshi/ebiten/v2/internal/shaderir"
+	"github.com/kpfaulkner/pure-gl/cocoa"
+	"github.com/kpfaulkner/pure-gl/graphics"
+	"github.com/kpfaulkner/pure-gl/graphicsdriver"
+	"github.com/kpfaulkner/pure-gl/graphicsdriver/metal/ca"
+	"github.com/kpfaulkner/pure-gl/graphicsdriver/metal/mtl"
+	"github.com/kpfaulkner/pure-gl/shaderir"
 )
 
 var sel_supportsFamily = objc.RegisterName("supportsFamily:")

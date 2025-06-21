@@ -21,9 +21,9 @@ import (
 
 	"golang.org/x/sync/errgroup"
 
-	"github.com/hajimehoshi/ebiten/v2/internal/graphics"
-	"github.com/hajimehoshi/ebiten/v2/internal/shaderir"
-	"github.com/hajimehoshi/ebiten/v2/internal/shaderir/hlsl"
+	"github.com/kpfaulkner/pure-gl/graphics"
+	"github.com/kpfaulkner/pure-gl/shaderir"
+	"github.com/kpfaulkner/pure-gl/shaderir/hlsl"
 )
 
 const (

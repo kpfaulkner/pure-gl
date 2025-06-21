@@ -21,8 +21,8 @@ import (
 
 	"github.com/ebitengine/purego/objc"
 
-	"github.com/hajimehoshi/ebiten/v2/internal/cocoa"
-	"github.com/hajimehoshi/ebiten/v2/internal/graphicsdriver/metal/mtl"
+	"github.com/kpfaulkner/pure-gl/cocoa"
+	"github.com/kpfaulkner/pure-gl/graphicsdriver/metal/mtl"
 )
 
 func (v *view) setWindow(window uintptr) {

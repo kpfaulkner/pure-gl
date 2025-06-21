@@ -17,7 +17,7 @@ package msl
 import (
 	"fmt"
 
-	"github.com/hajimehoshi/ebiten/v2/internal/shaderir"
+	"github.com/kpfaulkner/pure-gl/shaderir"
 )
 
 func opString(op shaderir.Op) string {

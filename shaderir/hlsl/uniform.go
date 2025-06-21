@@ -17,7 +17,7 @@ package hlsl
 import (
 	"fmt"
 
-	"github.com/hajimehoshi/ebiten/v2/internal/shaderir"
+	"github.com/kpfaulkner/pure-gl/shaderir"
 )
 
 const UniformVariableBoundaryInDwords = 4
