@@ -18,8 +18,8 @@ import (
 	"fmt"
 	"image"
 
-	"github.com/kpfaulkner/sdltest/graphics"
-	"github.com/kpfaulkner/sdltest/shaderir"
+	"github.com/kpfaulkner/pure-gl/graphics"
+	"github.com/kpfaulkner/pure-gl/shaderir"
 )
 
 type DstRegion struct {

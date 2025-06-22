@@ -23,7 +23,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/kpfaulkner/sdltest/shaderir"
+	"github.com/kpfaulkner/pure-gl/shaderir"
 )
 
 func canTruncateToInteger(v gconstant.Value) bool {

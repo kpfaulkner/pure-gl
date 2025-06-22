@@ -17,7 +17,7 @@ package glsl
 import (
 	"fmt"
 
-	"github.com/kpfaulkner/sdltest/shaderir"
+	"github.com/kpfaulkner/pure-gl/shaderir"
 )
 
 func opString(op shaderir.Op) string {

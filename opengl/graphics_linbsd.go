@@ -22,9 +22,9 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/kpfaulkner/sdltest/glfw"
-	"github.com/kpfaulkner/sdltest/graphicsdriver"
-	"github.com/kpfaulkner/sdltest/graphicsdriver/opengl/gl"
+	"github.com/kpfaulkner/pure-gl/glfw"
+	"github.com/kpfaulkner/pure-gl/graphicsdriver"
+	"github.com/kpfaulkner/pure-gl/graphicsdriver/opengl/gl"
 )
 
 func isGLXExtensionForGL2Available() bool {

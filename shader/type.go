@@ -20,7 +20,7 @@ import (
 	gconstant "go/constant"
 	"strings"
 
-	"github.com/kpfaulkner/sdltest/shaderir"
+	"github.com/kpfaulkner/pure-gl/shaderir"
 )
 
 func (cs *compileState) parseType(block *block, fname string, expr ast.Expr) (shaderir.Type, bool) {

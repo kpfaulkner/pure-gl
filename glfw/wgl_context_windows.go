@@ -13,8 +13,8 @@ import (
 
 	"golang.org/x/sys/windows"
 
-	"github.com/kpfaulkner/sdltest/microsoftgdk"
-	"github.com/kpfaulkner/sdltest/winver"
+	"github.com/kpfaulkner/pure-gl/microsoftgdk"
+	"github.com/kpfaulkner/pure-gl/winver"
 )
 
 type platformContextState struct {

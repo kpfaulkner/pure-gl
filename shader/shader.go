@@ -25,7 +25,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/kpfaulkner/sdltest/shaderir"
+	"github.com/kpfaulkner/pure-gl/shaderir"
 )
 
 type variable struct {

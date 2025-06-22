@@ -19,9 +19,9 @@ package opengl
 import (
 	"errors"
 
-	"github.com/kpfaulkner/sdltest/graphics"
-	"github.com/kpfaulkner/sdltest/graphicsdriver"
-	"github.com/kpfaulkner/sdltest/graphicsdriver/opengl/gl"
+	"github.com/kpfaulkner/pure-gl/graphics"
+	"github.com/kpfaulkner/pure-gl/graphicsdriver"
+	"github.com/kpfaulkner/pure-gl/graphicsdriver/opengl/gl"
 )
 
 type Image struct {

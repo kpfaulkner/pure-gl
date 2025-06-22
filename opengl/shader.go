@@ -19,10 +19,10 @@ package opengl
 import (
 	"fmt"
 
-	"github.com/kpfaulkner/sdltest/graphicsdriver"
-	"github.com/kpfaulkner/sdltest/graphicsdriver/opengl/gl"
-	"github.com/kpfaulkner/sdltest/shaderir"
-	"github.com/kpfaulkner/sdltest/shaderir/glsl"
+	"github.com/kpfaulkner/pure-gl/graphicsdriver"
+	"github.com/kpfaulkner/pure-gl/graphicsdriver/opengl/gl"
+	"github.com/kpfaulkner/pure-gl/shaderir"
+	"github.com/kpfaulkner/pure-gl/shaderir/glsl"
 )
 
 type Shader struct {

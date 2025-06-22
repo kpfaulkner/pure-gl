@@ -18,8 +18,8 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/kpfaulkner/sdltest/shader"
-	"github.com/kpfaulkner/sdltest/shaderir"
+	"github.com/kpfaulkner/pure-gl/shader"
+	"github.com/kpfaulkner/pure-gl/shaderir"
 )
 
 func shaderSuffix(unit shaderir.Unit) (string, error) {

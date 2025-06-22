@@ -22,9 +22,9 @@ import (
 	"runtime"
 	"unsafe"
 
-	"github.com/kpfaulkner/sdltest/graphics"
-	"github.com/kpfaulkner/sdltest/graphicsdriver/opengl/gl"
-	"github.com/kpfaulkner/sdltest/shaderir"
+	"github.com/kpfaulkner/pure-gl/graphics"
+	"github.com/kpfaulkner/pure-gl/graphicsdriver/opengl/gl"
+	"github.com/kpfaulkner/pure-gl/shaderir"
 )
 
 const floatSizeInBytes = 4

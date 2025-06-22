@@ -20,10 +20,10 @@ import (
 	"fmt"
 	"unsafe"
 
-	"github.com/kpfaulkner/sdltest/graphics"
-	"github.com/kpfaulkner/sdltest/graphicsdriver"
-	"github.com/kpfaulkner/sdltest/graphicsdriver/opengl/gl"
-	"github.com/kpfaulkner/sdltest/shaderir"
+	"github.com/kpfaulkner/pure-gl/graphics"
+	"github.com/kpfaulkner/pure-gl/graphicsdriver"
+	"github.com/kpfaulkner/pure-gl/graphicsdriver/opengl/gl"
+	"github.com/kpfaulkner/pure-gl/shaderir"
 )
 
 type activatedTexture struct {

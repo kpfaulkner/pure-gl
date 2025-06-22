@@ -17,10 +17,10 @@ package opengl
 import (
 	"fmt"
 
-	"github.com/kpfaulkner/sdltest/glfw"
-	"github.com/kpfaulkner/sdltest/graphicsdriver"
-	"github.com/kpfaulkner/sdltest/graphicsdriver/opengl/gl"
-	"github.com/kpfaulkner/sdltest/microsoftgdk"
+	"github.com/kpfaulkner/pure-gl/glfw"
+	"github.com/kpfaulkner/pure-gl/graphicsdriver"
+	"github.com/kpfaulkner/pure-gl/graphicsdriver/opengl/gl"
+	"github.com/kpfaulkner/pure-gl/microsoftgdk"
 )
 
 type graphicsPlatform struct {
@@ -42,10 +42,10 @@ func NewGraphics() (graphicsdriver.Graphics, error) {
 	if err := glfw.WindowHint(glfw.ClientAPI, glfw.OpenGLAPI); err != nil {
 		return nil, err
 	}
-	if err := glfw.WindowHint(glfw.ContextVersionMajor, 3); err != nil {
+	if err := glfw.WindowHint(glfw.ContextVersionMajor, 4); err != nil {
 		return nil, err
 	}
-	if err := glfw.WindowHint(glfw.ContextVersionMinor, 2); err != nil {
+	if err := glfw.WindowHint(glfw.ContextVersionMinor, 1); err != nil {
 		return nil, err
 	}
 
