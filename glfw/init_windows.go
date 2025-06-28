@@ -42,7 +42,7 @@ func Init() (ferr error) {
 		if ferr != nil {
 			// InvalidValue can happen when specific joysticks are used. This issue
 			// will be fixed in GLFW 3.3.5. As a temporary fix, ignore this error.
-			// See go-gl/glfw#292, go-gl/glfw#324, and glfw/glfw#1763
+			// See go-opengl/glfw#292, go-opengl/glfw#324, and glfw/glfw#1763
 			// (#1229).
 			if errors.Is(ferr, InvalidValue) {
 				ferr = nil

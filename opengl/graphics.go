@@ -22,7 +22,7 @@ import (
 
 	"github.com/kpfaulkner/pure-gl/graphics"
 	"github.com/kpfaulkner/pure-gl/graphicsdriver"
-	"github.com/kpfaulkner/pure-gl/graphicsdriver/opengl/gl"
+	"github.com/kpfaulkner/pure-gl/opengl/gl"
 	"github.com/kpfaulkner/pure-gl/shaderir"
 )
 
@@ -61,11 +61,11 @@ func newGraphics(ctx gl.Context) *Graphics {
 	g := &Graphics{
 		vsync: true,
 	}
-	if isDebug {
-		g.context.ctx = &gl.DebugContext{Context: ctx}
-	} else {
-		g.context.ctx = ctx
-	}
+	//if isDebug {
+	//	g.context.ctx = &gl.DebugContext{Context: ctx}
+	//} else {
+	g.context.ctx = ctx
+	//}
 	return g
 }
 

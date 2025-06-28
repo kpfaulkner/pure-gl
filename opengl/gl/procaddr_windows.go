@@ -41,7 +41,7 @@ func (c *defaultContext) getProcAddress(namea string) (uintptr, error) {
 		return r, nil
 	}
 	if err != nil && err != windows.ERROR_SUCCESS && err != windows.ERROR_PROC_NOT_FOUND {
-		return 0, fmt.Errorf("gl: wglGetProcAddress failed for %s: %w", namea, err)
+		return 0, fmt.Errorf("opengl: wglGetProcAddress failed for %s: %w", namea, err)
 	}
 
 	p := opengl32.NewProc(namea)

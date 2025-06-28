@@ -21,7 +21,7 @@ import (
 
 	"github.com/kpfaulkner/pure-gl/graphics"
 	"github.com/kpfaulkner/pure-gl/graphicsdriver"
-	"github.com/kpfaulkner/pure-gl/graphicsdriver/opengl/gl"
+	"github.com/kpfaulkner/pure-gl/opengl/gl"
 )
 
 type Image struct {

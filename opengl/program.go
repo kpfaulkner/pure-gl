@@ -23,7 +23,7 @@ import (
 	"unsafe"
 
 	"github.com/kpfaulkner/pure-gl/graphics"
-	"github.com/kpfaulkner/pure-gl/graphicsdriver/opengl/gl"
+	"github.com/kpfaulkner/pure-gl/opengl/gl"
 	"github.com/kpfaulkner/pure-gl/shaderir"
 )
 

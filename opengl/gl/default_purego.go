@@ -257,6 +257,7 @@ func (c *defaultContext) DeleteVertexArray(array uint32) {
 
 func (c *defaultContext) Disable(cap uint32) {
 	purego.SyscallN(c.gpDisable, uintptr(cap))
+	runtime.KeepAlive(cap)
 }
 
 func (c *defaultContext) DisableVertexAttribArray(index uint32) {
@@ -265,6 +266,7 @@ func (c *defaultContext) DisableVertexAttribArray(index uint32) {
 
 func (c *defaultContext) DrawElements(mode uint32, count int32, xtype uint32, offset int) {
 	purego.SyscallN(c.gpDrawElements, uintptr(mode), uintptr(count), uintptr(xtype), uintptr(offset))
+	runtime.KeepAlive(mode)
 }
 
 func (c *defaultContext) Enable(cap uint32) {
@@ -455,6 +457,7 @@ func (c *defaultContext) UniformMatrix4fv(location int32, value []float32) {
 
 func (c *defaultContext) UseProgram(program uint32) {
 	purego.SyscallN(c.gpUseProgram, uintptr(program))
+	runtime.KeepAlive(program)
 }
 
 func (c *defaultContext) VertexAttribPointer(index uint32, size int32, xtype uint32, normalized bool, stride int32, offset int) {
