@@ -17,6 +17,9 @@
 package gl
 
 const (
+	DEPTH_BUFFER_BIT = 0x00000100
+	COLOR_BUFFER_BIT = 0x00004000
+
 	ALWAYS                = 0x0207
 	ARRAY_BUFFER          = 0x8892
 	BACK                  = 0x0405

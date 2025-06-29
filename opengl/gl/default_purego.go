@@ -38,6 +38,7 @@ type defaultContext struct {
 	gpBufferSubData            uintptr
 	gpCheckFramebufferStatus   uintptr
 	gpClear                    uintptr
+	gpClearColor               uintptr
 	gpColorMask                uintptr
 	gpCompileShader            uintptr
 	gpCreateProgram            uintptr
@@ -49,6 +50,7 @@ type defaultContext struct {
 	gpDeleteShader             uintptr
 	gpDeleteTextures           uintptr
 	gpDeleteVertexArrays       uintptr
+	gpDetachShader             uintptr
 	gpDisable                  uintptr
 	gpDisableVertexAttribArray uintptr
 	gpDrawElements             uintptr
@@ -170,6 +172,10 @@ func (c *defaultContext) BufferSubData(target uint32, offset int, data []byte) {
 	runtime.KeepAlive(data)
 }
 
+func (c *defaultContext) BufferData(target uint32, size int, data []byte, usage uint32) {
+	purego.SyscallN(c.gpBufferData, uintptr(target), uintptr(size), uintptr(unsafe.Pointer(&data[0])), uintptr(usage))
+}
+
 func (c *defaultContext) CheckFramebufferStatus(target uint32) uint32 {
 	ret, _, _ := purego.SyscallN(c.gpCheckFramebufferStatus, uintptr(target))
 	return uint32(ret)
@@ -177,6 +183,10 @@ func (c *defaultContext) CheckFramebufferStatus(target uint32) uint32 {
 
 func (c *defaultContext) Clear(mask uint32) {
 	purego.SyscallN(c.gpClear, uintptr(mask))
+}
+
+func (c *defaultContext) ClearColor(red float32, green float32, blue float32, alpha float32) {
+	purego.SyscallN(c.gpClearColor, uintptr(red), uintptr(green), uintptr(blue), uintptr(alpha))
 }
 
 func (c *defaultContext) ColorMask(red bool, green bool, blue bool, alpha bool) {
@@ -253,6 +263,10 @@ func (c *defaultContext) DeleteTexture(texture uint32) {
 
 func (c *defaultContext) DeleteVertexArray(array uint32) {
 	purego.SyscallN(c.gpDeleteVertexArrays, 1, uintptr(unsafe.Pointer(&array)))
+}
+
+func (c *defaultContext) DetachShader(program uint32, shader uint32) {
+	purego.SyscallN(c.gpDetachShader, uintptr(program), uintptr(shader))
 }
 
 func (c *defaultContext) Disable(cap uint32) {
@@ -485,6 +499,7 @@ func (c *defaultContext) LoadFunctions() error {
 	c.gpBufferSubData = g.get("glBufferSubData")
 	c.gpCheckFramebufferStatus = g.get("glCheckFramebufferStatus")
 	c.gpClear = g.get("glClear")
+	c.gpClearColor = g.get("glClearColor")
 	c.gpColorMask = g.get("glColorMask")
 	c.gpCompileShader = g.get("glCompileShader")
 	c.gpCreateProgram = g.get("glCreateProgram")
@@ -494,6 +509,7 @@ func (c *defaultContext) LoadFunctions() error {
 	c.gpDeleteProgram = g.get("glDeleteProgram")
 	c.gpDeleteRenderbuffers = g.get("glDeleteRenderbuffers")
 	c.gpDeleteShader = g.get("glDeleteShader")
+	c.gpDetachShader = g.get("glDetachShader")
 	c.gpDeleteTextures = g.get("glDeleteTextures")
 	c.gpDeleteVertexArrays = g.get("glDeleteVertexArrays")
 	c.gpDisable = g.get("glDisable")

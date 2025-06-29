@@ -39,8 +39,10 @@ type Context interface {
 	BlendFuncSeparate(srcRGB uint32, dstRGB uint32, srcAlpha uint32, dstAlpha uint32)
 	BufferInit(target uint32, size int, usage uint32)
 	BufferSubData(target uint32, offset int, data []byte)
+	BufferData(target uint32, size int, data []byte, usage uint32)
 	CheckFramebufferStatus(target uint32) uint32
 	Clear(mask uint32)
+	ClearColor(red float32, green float32, blue float32, alpha float32)
 	ColorMask(red, green, blue, alpha bool)
 	CompileShader(shader uint32)
 	CreateBuffer() uint32
@@ -57,6 +59,7 @@ type Context interface {
 	DeleteShader(shader uint32)
 	DeleteTexture(texture uint32)
 	DeleteVertexArray(array uint32)
+	DetachShader(program uint32, shader uint32)
 	Disable(cap uint32)
 	DisableVertexAttribArray(index uint32)
 	DrawElements(mode uint32, count int32, xtype uint32, offset int)
